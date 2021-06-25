@@ -37,7 +37,10 @@
                 <img class="main__icon" src="img/info.png" alt="info">
                 <h2 class="main__subheader-info">Личная информация</h2>
                 <form class="main__form" action="#">
-                    <input class="main__name" type="text" placeholder="ФИО">
+                    <div class="name__group">
+                        <input class="main__name" type="text" placeholder=" ">
+                        <label class="main__name-label">ФИО</label>
+                    </div>                    
                     <div class="custom-select">
                         <select class="main__date" id="mySelect">
                             <option value="0">Год рождения</option>
@@ -65,10 +68,18 @@
                             <option value="22">2021</option>
                         </select>                    
                     </div>
-                    
-                    <input class="main__city" type="text" placeholder="Место проживания">
-                    <input class="main__skype" type="text" placeholder="Skype">
-                    <input class="main__email" type="email" placeholder="E-mail">
+                    <div class="city__group"> 
+                        <input class="main__city" placeholder=" ">
+                        <label class="main__city-label">Место проживания</label>
+                    </div>
+                    <div class="skype__group">
+                        <input class="main__skype" type="text" placeholder=" ">
+                        <label class="main__skype-label">Skype</label>
+                    </div>                   
+                    <div class="email__group">
+                        <input class="main__email" type="email" placeholder=" ">
+                        <label class="main__email-label">E-mail</label>
+                    </div>                    
                 </form>
                 <img class="main__icon" src="img/skill.png" alt="skills">
                 <h2 class="main__subtitle-skills">Расскажите о своем опыте</h2>

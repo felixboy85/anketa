@@ -180,12 +180,46 @@ select {
     font-weight: 400;
 }
 
-input::placeholder {
-    padding: 20px 15px;
-    color: #c8c8c8;
+.city__group, .name__group, .skype__group, .email__group  {
+    position: relative;
+    width: 100%;    
     text-align: center;
+}
+
+.main__city-label, .main__name-label,
+.main__skype-label, .main__email-label  {
+    position: absolute;
+    top: 14px;
     font-size: 24px;
-    font-weight: 400;
+    left: 50%;    
+    transform: translateX(-50%);
+    z-index: -1;
+    color: #c8c8c8;
+    transition: .3s;
+}
+
+.main__city, .main__name, .main__skype, .main__email   {
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;    
+    transition: .3s;
+}
+
+.main__city:focus, .main__name:focus, .main__skype:focus, .main__email:focus   {
+    border: 1px solid #435999;
+}
+
+.main__city:focus ~ .main__city-label,
+.main__city:not(:placeholder-shown) ~ .main__city-label, 
+.main__name:focus ~ .main__name-label,
+.main__name:not(:placeholder-shown) ~ .main__name-label,
+.main__skype:focus ~ .main__skype-label,
+.main__skype:not(:placeholder-shown) ~ .main__skype-label,
+.main__email:focus ~ .main__email-label,
+.main__email:not(:placeholder-shown) ~ .main__email-label  {
+    top: 2px;
+    font-size: 14px;
 }
 
 input.main__date {
@@ -478,6 +512,17 @@ p {
     }
 }
 
+@media (max-width: 550px) {
+    .main__form-skills {
+        flex-direction: column;
+    }
+    .main__city-label, .main__name-label,
+    .main__skype-label, .main__email-label {
+        font-size: 16px;
+        top: 20px;
+    } 
+}
+
 @media (max-width: 415px) {
     .skill__js1, .skill__js2, .skill__js3, .skill__js4 {
         font-size: 10px;
@@ -491,9 +536,7 @@ p {
     .skill__js4::before {
         left: 380px;
     }
-    .main__form-skills {
-        flex-direction: column;
-    }
+    
 }
 
 @media (max-width: 375px) {    
