@@ -178,6 +178,12 @@ select {
     text-align: center;
     font-size: 24px;
     font-weight: 400;
+    background-color: transparent;
+    outline: none;
+}
+
+select:focus {
+    border: 1px solid #435999;
 }
 
 .city__group, .name__group, .skype__group, .email__group  {
