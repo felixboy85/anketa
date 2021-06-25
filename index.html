@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header"> 
+        <div class="container">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link" href="#">Личная информация</a></li>
+                <li class="header__item">
+                    <a class="header__link" href="#">Опыт</a></li>
+                <li class="header__item">
+                    <a class="header__link" href="#">JavaScript</a></li>
+                <li class="header__item">
+                    <a class="header__link" href="#">О себе</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="hamburger" id="nav-icon1">
+        <span class="hamburger__span"></span>
+        <span class="hamburger__span"></span>
+        <span class="hamburger__span"></span>
+    </div>
+    <section class="main">
+        <div class="container">
+            <h1 class="main__header">Анкета</h1>
+            <div class="main__info">
+                <img class="main__icon" src="img/info.png" alt="info">
+                <h2 class="main__subheader-info">Личная информация</h2>
+                <form class="main__form" action="#">
+                    <input class="main__name" type="text" placeholder="ФИО">
+                    <div class="custom-select">
+                        <select class="main__date" id="mySelect">
+                            <option value="0">Год рождения</option>
+                            <option value="1">2000</option>
+                            <option value="2">2001</option>
+                            <option value="3">2002</option>
+                            <option value="4">2003</option>
+                            <option value="5">2004</option>
+                            <option value="6">2005</option>
+                            <option value="7">2006</option>
+                            <option value="8">2007</option>
+                            <option value="9">2008</option>
+                            <option value="10">2009</option>
+                            <option value="11">2010</option>
+                            <option value="12">2011</option>
+                            <option value="13">2012</option>
+                            <option value="14">2013</option>
+                            <option value="15">2014</option>
+                            <option value="16">2015</option>
+                            <option value="17">2016</option>
+                            <option value="18">2017</option>
+                            <option value="19">2018</option>
+                            <option value="20">2019</option>
+                            <option value="21">2020</option>
+                            <option value="22">2021</option>
+                        </select>                    
+                    </div>
+                    
+                    <input class="main__city" type="text" placeholder="Место проживания">
+                    <input class="main__skype" type="text" placeholder="Skype">
+                    <input class="main__email" type="email" placeholder="E-mail">
+                </form>
+                <img class="main__icon" src="img/skill.png" alt="skills">
+                <h2 class="main__subtitle-skills">Расскажите о своем опыте</h2>
+                <form class="main__form-skills" action="#">
+                    <div class="col-1">
+                        <div class="skill__item">
+                            <input class="skill__bem" id="bem" type="checkbox">
+                            <label for="bem"></label>
+                            <p>БЭМ/OOCSS</p>
+                        </div>  
+                        <div class="skill__item">
+                            <input class="skill__sass" id="sass" type="checkbox">
+                            <label for="sass"></label>
+                            <p>Stylus/LESS/SASS</p>
+                        </div>                     
+                        <div class="skill__item">
+                            <input class="skill__svg" id="svg" type="checkbox">
+                            <label for="svg"></label>
+                            <p>Работаю с SVG</p>
+                        </div>                        
+                    </div>                    
+                    <div class="col-1">
+                        <div class="skill__item">
+                            <input class="skill__sem" id="sem" type="checkbox">
+                            <label for="sem"></label>
+                            <p>Верстаю семантично</p>
+                        </div>
+                        <div class="skill__item">
+                            <input class="skill__es" id="es" type="checkbox">
+                            <label for="es"></label>
+                            <p>ES2015/ES2016</p>
+                        </div>
+                        <div class="skill__item">
+                            <input class="skill__gulp" id="gulp" type="checkbox">
+                            <label for="gulp"></label>
+                            <p>Gulp/GRUNT</p>
+                        </div>                        
+                    </div>
+                    <div class="col-1">
+                        <div class="skill__item">
+                            <input class="skill__webp" id="webp" type="checkbox">
+                            <label for="webp"></label>
+                            <p>Webpack</p>
+                        </div>  
+                        <div class="skill__item">
+                            <input class="skill__jquery" id="jquery" type="checkbox">
+                            <label for="jquery"></label>
+                            <p>jQuery</p>
+                        </div>                      
+                        <div class="skill__item">
+                            <input class="skill__git" id="git" type="checkbox">
+                            <label for="git"></label>
+                            <p>Ипользую Git</p>
+                        </div>                        
+                    </div>
+                </form>
+                <div class="main__js">
+                    <img class="main__icon" src="img/js.png" alt="skills">
+                    <h2 class="main__subtitle-js">Уровень владения JavaScript</h2>
+                    <div class="main__skill-js">
+                        <p class="skill__js1">Не владею</p>
+                        <p class="skill__js2">Использую готовые <br> решения</p>
+                        <p class="skill__js3">Использую готовые решения <br> и умею и переделывать</p>
+                        <p class="skill__js4">Пишу сложный JS с нуля</p>
+                    </div>                   
+                        <input  class="main__range-js" id="range" type="range">
+                        <label for="range" class="visually-hidden"></label>
+                </div>
+                <div class="main__about">
+                    <img class="main__icon" src="img/myself.png" alt="skills">
+                    <h2 class="main__subtitle-about">Расскажите о себе</h2>
+                    <div class="main__descr">Напишите несколько предложений, чем привлекла наша вакансия
+                        и что вы ожидаете от работы у нас.
+                    </div>
+                    <textarea class="main__textarea" name="text" id="text" placeholder="Понравилась тем, что..."></textarea>
+                    <button class="btn__ready" type="submit">Готово</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
